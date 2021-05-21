@@ -10,3 +10,4 @@ Werkzeug==2.0.1
 requests~=2.25.1
 jaeger_client
 flask_opentracing
+opentracing~=2.4.0
