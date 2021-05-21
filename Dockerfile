@@ -12,4 +12,4 @@ COPY . /usr/app
 
 EXPOSE 5000:5000
 
-CMD FLASK_APP=app.py flask run
+CMD ["python", "app.py"]
