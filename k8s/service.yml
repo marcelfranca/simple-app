@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: myapp
+  namespace: simple-app
   labels:
     app: myapp
 spec:

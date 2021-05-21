@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp
+  namespace: simple-app
   labels:
     app: myapp
 spec:
@@ -20,3 +21,8 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
+          resources:
+            requests:
+              memory: "500Mi"
+            limits:
+              memory: "1Gi"

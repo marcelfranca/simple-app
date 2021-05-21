@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: default
+  name: cypressgpod
+  labels:
+    app: cypress
+spec:
+  containers:
+    - name: cypresspod
+      image: cypress/browsers:node14.16.0-chrome89-ff86
+      imagePullPolicy: IfNotPresent
+      command: ["sleep"]
+      args: ["3600"]
+      resources:
+        requests:
+          cpu: "0.1"
+          memory: "500Mi"
+        limits:
+          cpu: "1"
+          memory: "1Gi"
